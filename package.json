@@ -24,10 +24,6 @@
   "bugs": {
     "url": "https://github.com/kcabreradev/bitbucket-changelog-gen/issues"
   },
-  "engines": {
-    "node": ">=4.0.0",
-    "npm": ">=2.14.2"
-  },
   "scripts": {
     "lint": "eslint index.js",
     "test": "mocha --recursive"
@@ -45,10 +41,12 @@
     "moment": "^2.11.1"
   },
   "devDependencies": {
-    "eslint": "^1.10.3",
-    "eslint-config-rackt": "^1.1.1",
-    "expect": "^1.13.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
     "express": "^4.13.3",
-    "mocha": "^2.3.4"
+    "mocha": "^9.1.3"
   }
 }
