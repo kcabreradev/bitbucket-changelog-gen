@@ -228,7 +228,7 @@ function renderRelease(r) {
 }
 
 function renderReleaseTitle(release) {
-	return `## ${release.version}`
+	return `## Version ${release.version}`
 }
 
 function renderPrs(prs, indent) {
@@ -239,8 +239,8 @@ function renderPrs(prs, indent) {
 function renderPr(pr, indent) {
 	const space = ' '.repeat(indent)
 	let lines = []
-	let line = `${space}- ${renderPrLink(pr)} ${pr.title} `
-	line += `${renderAuthor(pr)}${renderJiras(pr)} - ${renderDate(pr.updatedDate, 'D/M/YY')}`
+	let line = `${space}- ${renderJiras(pr)} ${pr.title} `
+	line += `*${renderAuthor(pr)} - (${renderPrLink(pr)}) ${renderDate(pr.updatedDate, 'D/M/YY')}`
 	lines.push(line)
 	if (pr.children && pr.children.length) {
 		lines = lines.concat(renderPrs(pr.children, indent + 4))
@@ -249,7 +249,7 @@ function renderPr(pr, indent) {
 }
 
 function renderPrLink(pr) {
-	return `[${pr.id}](${pr.links.self[0].href})`
+	return `[PR ${pr.id}](${pr.links.self[0].href})`
 }
 
 function renderAuthor(pr) {
@@ -268,9 +268,9 @@ function renderJiras(pr) {
 	const jiras = [ ...new Set(comb) ]
 	if (jiras.length) {
 		if (settings.jira) {
-			return ` (${jiras.map(id => `[${id}](${settings.jira}/browse/${id})`).join(', ')})`
+			return `${jiras.map(id => `[${id}](${settings.jira}/browse/${id})`).join(', ')}`
 		} else {
-			return ` (${jiras.join(', ')})`
+			return `${jiras.join(', ')}`
 		}
 	} else {
 		return ''
