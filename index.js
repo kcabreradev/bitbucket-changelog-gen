@@ -221,7 +221,7 @@ function renderReleases(releases) {
 function renderRelease(r) {
 	let lines = []
 	lines.push(renderReleaseTitle(r))
-	lines.push(`${renderDate(r.date, 'MMM Do YY')}\n`)
+	lines.push(`Published on ${renderDate(r.date, 'MMM Do YY')}\n`)
 	lines = lines.concat(renderPrs(r.prs, 0))
 	lines.push('')
 	return lines
@@ -240,7 +240,7 @@ function renderPr(pr, indent) {
 	const space = ' '.repeat(indent)
 	let lines = []
 	let line = `${space}- ${renderJiras(pr)} ${pr.title} `
-	line += ` - *${renderAuthor(pr)} (${renderPrLink(pr)}) ${renderDate(pr.updatedDate, 'D/M/YY')}*`
+	line += ` - *${renderAuthor(pr)} (${renderPrLink(pr)}) ${renderDate(pr.updatedDate, 'M/D/YY')}*`
 	lines.push(line)
 	if (pr.children && pr.children.length) {
 		lines = lines.concat(renderPrs(pr.children, indent + 4))
