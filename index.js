@@ -240,7 +240,7 @@ function renderPr(pr, indent) {
 	const space = ' '.repeat(indent)
 	let lines = []
 	let line = `${space}- ${renderPrLink(pr)} ${pr.title} `
-	line += `<small>${renderAuthor(pr)}${renderJiras(pr)} - ${renderDate(pr.updatedDate, 'D/M/YY')}</small>`
+	line += `${renderAuthor(pr)}${renderJiras(pr)} - ${renderDate(pr.updatedDate, 'D/M/YY')}`
 	lines.push(line)
 	if (pr.children && pr.children.length) {
 		lines = lines.concat(renderPrs(pr.children, indent + 4))
