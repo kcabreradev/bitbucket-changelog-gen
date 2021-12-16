@@ -1,5 +1,5 @@
 {
-  "name": "bitbucket-changelog",
+  "name": "bitbucket-changelog-gen",
   "version": "1.2.0",
   "description": "",
   "keywords": [
@@ -12,17 +12,17 @@
     "release"
   ],
   "author": {
-    "name": "Mike Stead",
-    "url": "https://github.com/mikestead"
+    "name": "Kevin Cabrera",
+    "url": "https://github.com/kcabreradev"
   },
   "license": "MIT",
-  "homepage": "https://github.com/mikestead/bitbucket-changelog",
+  "homepage": "https://github.com/kcabreradev/bitbucket-changelog-gen",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mikestead/bitbucket-changelog.git"
+    "url": "https://github.com/kcabreradev/bitbucket-changelog-gen.git"
   },
   "bugs": {
-    "url": "https://github.com/mikestead/bitbucket-changelog/issues"
+    "url": "https://github.com/kcabreradev/bitbucket-changelog-gen/issues"
   },
   "engines": {
     "node": ">=4.0.0",
